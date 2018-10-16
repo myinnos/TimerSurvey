@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="flat_pressed">#66999999</color>
+    <color name="survey_button_bg">#303F9F</color>
+    <color name="survey_button_text">#FFFFFF</color>
+    <color name="survey_text">#000000</color>
+
+    <color name="green">#2ed8b6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff4435</color>
+    <color name="black_transparent">#33000000</color>
+
+    <color name="option_pressed">#e9e4e4</color>
+    <color name="option_text_pressed">#000000</color>
+    <color name="option_text">#080808</color>
+
+</resources>

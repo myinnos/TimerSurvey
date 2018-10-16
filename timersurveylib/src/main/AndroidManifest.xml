@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.myinnos.timersurveylib">
+
+    <application
+        android:configChanges="orientation"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="in.myinnos.timersurveylib.provider"
+            android:exported="false"
+            tools:replace="android:authorities"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths"/>
+        </provider>
+
+    </application>
+
+
+</manifest>
