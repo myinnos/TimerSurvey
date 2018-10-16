@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("https://api.myjson.com")
                         .addConverterFactory(GsonConverterFactory.create())
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         //i_survey.putExtra("json_survey", loadSurveyJson("customer_survey.json"));
         i_survey.putExtra("json_survey", json);
         i_survey.putExtra(AppSurveyConstants.SUR_REGISTERED_BY, registered_by);
-        i_survey.putExtra(AppSurveyConstants.FORM_NAME, "surveys/abhis-create/");
         startActivityForResult(i_survey, SURVEY_REQUEST);
     }
 }

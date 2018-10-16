@@ -32,7 +32,6 @@ public class SurveyActivity extends AppCompatActivity {
     private ViewPager mPager;
     private String style_string = null;
     private String registered_by;
-    private String form_name;
     private LinearLayout liProgress;
 
     @Override
@@ -53,11 +52,6 @@ public class SurveyActivity extends AppCompatActivity {
             mSurveyPojo = new Gson().fromJson(bundle.getString("json_survey"), SurveyPojo.class);
             /// registered_by user
             registered_by = bundle.getString(AppSurveyConstants.SUR_REGISTERED_BY);
-            form_name = bundle.getString(AppSurveyConstants.FORM_NAME);
-
-            SharedPreferences.Editor editor = getSharedPreferences(AppSurveyConstants.PREFERENCES_SURVEYS, MODE_PRIVATE).edit();
-            editor.putString(AppSurveyConstants.FORM_NAME, form_name);
-            editor.apply();
 
             //
             if (bundle.containsKey("style")) {
