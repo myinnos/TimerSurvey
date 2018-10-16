@@ -79,29 +79,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //json stored in the assets folder. but you can get it from wherever you like.
-    private String loadSurveyJson(String filename) {
-        try {
-            InputStream is = getAssets().open(filename);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            return new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
     private void openSurvey(String json, String registered_by, String base_url) {
         Intent i_survey = new Intent(MainActivity.this, SurveyActivity.class);
         //i_survey.putExtra("json_survey", loadSurveyJson("customer_survey.json"));
         i_survey.putExtra("json_survey", json);
         i_survey.putExtra(AppSurveyConstants.SUR_REGISTERED_BY, registered_by);
-        i_survey.putExtra(AppSurveyConstants.SUR_REGISTERED_DESIGNATION, "1BA");
-        i_survey.putExtra(AppSurveyConstants.BASE_URL, base_url);
-        i_survey.putExtra(AppSurveyConstants.SUR_CUSTOMER_ID, "1");
         i_survey.putExtra(AppSurveyConstants.FORM_NAME, "surveys/abhis-create/");
         startActivityForResult(i_survey, SURVEY_REQUEST);
     }

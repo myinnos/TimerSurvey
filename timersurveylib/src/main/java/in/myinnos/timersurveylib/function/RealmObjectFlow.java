@@ -9,7 +9,7 @@ public class RealmObjectFlow {
 
     // The Realm file will be located in Context.getFilesDir() with name "myrealm.realm"
     public static RealmConfiguration config = new RealmConfiguration.Builder()
-            .name("1bridge2.realm")
+            .name("myinnos.realm")
             .deleteRealmIfMigrationNeeded()
             .schemaVersion(1)
             .build();

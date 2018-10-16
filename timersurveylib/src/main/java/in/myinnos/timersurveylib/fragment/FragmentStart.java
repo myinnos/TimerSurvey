@@ -22,8 +22,7 @@ public class FragmentStart extends Fragment {
 
     private FragmentActivity mContext;
     private TextView textView_start;
-    private String registeredBy, latitude, longitude;
-    private String customerId;
+    private String registeredBy;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,15 +42,8 @@ public class FragmentStart extends Fragment {
                 //Answers.getInstance().put_answer(AppSurveyConstants.SUR_REGISTERED_BY, registeredBy);
                 //Answers.getInstance().put_answer(AppSurveyConstants.SUR_CUSTOMER_ID, customerId);
 
-                SurveyHelper.putAnswer(AppSurveyConstants.SUR_LONGITUDE, latitude,
-                        "string", AppSurveyConstants.SUR_LATITUDE, latitude);
-                SurveyHelper.putAnswer(AppSurveyConstants.SUR_LONGITUDE, longitude,
-                        "string", AppSurveyConstants.SUR_LONGITUDE, longitude);
-
                 SurveyHelper.putAnswer(AppSurveyConstants.SUR_REGISTERED_BY, registeredBy,
                         "string", AppSurveyConstants.SUR_REGISTERED_BY, registeredBy);
-                SurveyHelper.putAnswer(AppSurveyConstants.SUR_CUSTOMER_ID, customerId,
-                        "int", AppSurveyConstants.SUR_CUSTOMER_ID, customerId);
 
                 ((SurveyActivity) mContext).go_to_next();
             }
@@ -67,10 +59,6 @@ public class FragmentStart extends Fragment {
         mContext = getActivity();
         SurveyProperties survery_properties = (SurveyProperties) getArguments().getSerializable("survery_properties");
         registeredBy = getArguments().getString(AppSurveyConstants.SUR_REGISTERED_BY);
-        customerId = getArguments().getString(AppSurveyConstants.SUR_CUSTOMER_ID);
-
-        latitude = getArguments().getString(AppSurveyConstants.SUR_LATITUDE);
-        longitude = getArguments().getString(AppSurveyConstants.SUR_LONGITUDE);
 
         assert survery_properties != null;
         textView_start.setText(Html.fromHtml(survery_properties.getIntroMessage()));
