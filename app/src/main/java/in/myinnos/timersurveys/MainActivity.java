@@ -44,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         .build();
                 ApiInterfaceSurveys apiInterfaceSurveys = retrofit.create(ApiInterfaceSurveys.class);
 
-                Call<JsonObject> jsonCall = apiInterfaceSurveys.cusRegForm();
+                Call<JsonObject> jsonCall = apiInterfaceSurveys.timerSurveyForm();
 
                 jsonCall.enqueue(new Callback<JsonObject>() {
                     @Override
                     public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
 
-                        openSurvey(response.body().toString(), "BAA0006", "http://staging-associate.1bridge.in:8888/api/v1/");
+                        openSurvey(response.body().toString(), "BAA0006");
 
                     }
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openSurvey(String json, String registered_by, String base_url) {
+    private void openSurvey(String json, String registered_by) {
         Intent i_survey = new Intent(MainActivity.this, SurveyActivity.class);
         //i_survey.putExtra("json_survey", loadSurveyJson("customer_survey.json"));
         i_survey.putExtra("json_survey", json);
