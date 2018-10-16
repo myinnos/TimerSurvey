@@ -1,21 +1,19 @@
 package in.myinnos.timersurveylib.fragment;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
-import android.util.TypedValue;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +30,8 @@ public class FragmentRadioboxes extends Fragment {
     private FragmentActivity mContext;
     private Button button_continue;
     private TextView textview_q_title;
-    private RadioGroup radioGroup;
+    private ImageView image_1, image_2;
+    private TextView textview_a_title_1, textview_a_title_2;
     private final ArrayList<RadioButton> allRb = new ArrayList<>();
     private boolean at_leaset_one_checked = false;
     private String questionId, questionVariableType;
@@ -44,9 +43,15 @@ public class FragmentRadioboxes extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_radioboxes, container, false);
 
+        textview_a_title_1 = (TextView) rootView.findViewById(R.id.textview_a_title_1);
+        textview_a_title_2 = (TextView) rootView.findViewById(R.id.textview_a_title_2);
+
+        image_1 = (ImageView) rootView.findViewById(R.id.image_1);
+        image_2 = (ImageView) rootView.findViewById(R.id.image_2);
+
         button_continue = (Button) rootView.findViewById(R.id.button_continue);
         textview_q_title = (TextView) rootView.findViewById(R.id.textview_q_title);
-        radioGroup = (RadioGroup) rootView.findViewById(R.id.radioGroup);
+
         button_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,11 +78,6 @@ public class FragmentRadioboxes extends Fragment {
 
         if (the_choice.length() > 0) {
             //Answers.getInstance().put_answer(questionId, the_choice);
-
-            SharedPreferences.Editor editor = mContext.getSharedPreferences("CUSTOMER_DETAILS", Context.MODE_PRIVATE).edit();
-            editor.putString("gender", the_choice_answers);
-            editor.apply();
-
             SurveyHelper.putAnswer(textview_q_title.getText().toString().trim(), the_choice_answers,
                     questionVariableType, questionId, the_choice);
 
@@ -115,22 +115,19 @@ public class FragmentRadioboxes extends Fragment {
             qq_data_tag.add(q_data.getChoicesListModelList().get(i).getValue());
         }
 
-        for (int i = 0; i < qq_data.size(); i++) {
-            RadioButton rb = new RadioButton(mContext);
-            rb.setText(Html.fromHtml(qq_data.get(i)));
-            rb.setTag(qq_data_tag.get(i));
-            rb.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
-            rb.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            radioGroup.addView(rb);
-            allRb.add(rb);
+        String[] splitted_1 = qq_data.get(0).split(":-");
+        String[] splitted_2 = qq_data.get(1).split(":-");
 
-            rb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    collect_data();
-                }
-            });
-        }
+        textview_a_title_1.setText(Html.fromHtml(splitted_1[0]));
+        Log.d("asxasx", splitted_1[1]);
+        Picasso.get()
+                .load(splitted_1[1])
+                .into(image_1);
+        textview_a_title_2.setText(Html.fromHtml(splitted_2[0]));
+        Picasso.get()
+                .load(splitted_2[1])
+                .into(image_2);
+
         /*if (q_data.getRandomChoices()) {
             Collections.shuffle(qq_data);
         }*/
