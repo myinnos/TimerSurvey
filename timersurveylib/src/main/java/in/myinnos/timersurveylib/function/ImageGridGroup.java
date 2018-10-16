@@ -31,7 +31,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @see AppCompatRadioButton
  */
-public class RadioGridGroup extends GridLayout {
+public class ImageGridGroup extends GridLayout {
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
     private int mCheckedId = -1;
     private CompoundButton.OnCheckedChangeListener mChildOnCheckedChangeListener;
@@ -39,12 +39,12 @@ public class RadioGridGroup extends GridLayout {
     private OnCheckedChangeListener mOnCheckedChangeListener;
     private PassThroughHierarchyChangeListener mPassThroughListener;
 
-    public RadioGridGroup(Context context) {
+    public ImageGridGroup(Context context) {
         super(context);
         init();
     }
 
-    public RadioGridGroup(Context context, AttributeSet attrs) {
+    public ImageGridGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
@@ -134,17 +134,17 @@ public class RadioGridGroup extends GridLayout {
     @Override
     public void onInitializeAccessibilityEvent(@NonNull AccessibilityEvent event) {
         super.onInitializeAccessibilityEvent(event);
-        event.setClassName(RadioGridGroup.class.getName());
+        event.setClassName(ImageGridGroup.class.getName());
     }
 
     @Override
     public void onInitializeAccessibilityNodeInfo(@NonNull AccessibilityNodeInfo info) {
         super.onInitializeAccessibilityNodeInfo(info);
-        info.setClassName(RadioGridGroup.class.getName());
+        info.setClassName(ImageGridGroup.class.getName());
     }
 
     public interface OnCheckedChangeListener {
-        void onCheckedChanged(RadioGridGroup group, int checkedId);
+        void onCheckedChanged(ImageGridGroup group, int checkedId);
     }
 
     private class CheckedStateTracker implements CompoundButton.OnCheckedChangeListener {
@@ -170,7 +170,7 @@ public class RadioGridGroup extends GridLayout {
         private ViewGroup.OnHierarchyChangeListener mOnHierarchyChangeListener;
 
         public void onChildViewAdded(View parent, View child) {
-            if (parent == RadioGridGroup.this && child instanceof AppCompatRadioButton) {
+            if (parent == ImageGridGroup.this && child instanceof AppCompatRadioButton) {
                 int id = child.getId();
                 // generates an id if it's missing
                 if (id == View.NO_ID) {
@@ -187,7 +187,7 @@ public class RadioGridGroup extends GridLayout {
         }
 
         public void onChildViewRemoved(View parent, View child) {
-            if (parent == RadioGridGroup.this && child instanceof AppCompatRadioButton) {
+            if (parent == ImageGridGroup.this && child instanceof AppCompatRadioButton) {
                 ((AppCompatRadioButton) child).setOnCheckedChangeListener(null);
             }
 

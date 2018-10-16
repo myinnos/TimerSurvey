@@ -41,7 +41,7 @@ public class FragmentRadioboxes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_radioboxes, container, false);
+                R.layout.fragment_image_grid, container, false);
 
         textview_a_title_1 = (TextView) rootView.findViewById(R.id.textview_a_title_1);
         textview_a_title_2 = (TextView) rootView.findViewById(R.id.textview_a_title_2);
