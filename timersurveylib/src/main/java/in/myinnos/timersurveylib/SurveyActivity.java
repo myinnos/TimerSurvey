@@ -38,6 +38,7 @@ public class SurveyActivity extends AppCompatActivity {
     private LinearLayout liProgress;
     private TextView txTimer;
     private String TIMER_HEADER_STRING = "";
+    private Boolean HANDLING_BACK_BUTTON = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class SurveyActivity extends AppCompatActivity {
             registered_by = bundle.getString(AppSurveyConstants.SUR_REGISTERED_BY);
             TIMER_IN_MILLI_SECONDS = bundle.getLong(AppSurveyConstants.TIMER_IN_MILLI_SECONDS);
             TIMER_HEADER_STRING = bundle.getString(AppSurveyConstants.TIMER_HEADER_STRING);
+            HANDLING_BACK_BUTTON = bundle.getBoolean(AppSurveyConstants.HANDLING_BACK_BUTTON);
             //
             if (bundle.containsKey("style")) {
                 style_string = bundle.getString("style");
@@ -166,7 +168,10 @@ public class SurveyActivity extends AppCompatActivity {
                     }).show();
 
         } else {
-            //mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            if (!HANDLING_BACK_BUTTON) {
+                mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+                return;
+            }
             Snackbar snackbar = Snackbar
                     .make(mPager, "Sorry, You cannot go back", Snackbar.LENGTH_LONG)
                     .setAction("OK", new View.OnClickListener() {

@@ -10,4 +10,5 @@ public class AppSurveyConstants {
     public static String PREFERENCES_SURVEYS = "PREFERENCES_SURVEYS";
     public static String TIMER_IN_MILLI_SECONDS = "TIMER_IN_MILLI_SECONDS";
     public static String TIMER_HEADER_STRING = "TIMER_HEADER_STRING";
+    public static String HANDLING_BACK_BUTTON = "HANDLING_BACK_BUTTON";
 }

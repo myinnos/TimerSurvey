@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
 
                         openSurvey(response.body().toString(), "BAA0006",
-                                30000, "REMAINING TIME:");
-
+                                30000, "REMAINING TIME:",
+                                false);
                     }
 
                     @Override
@@ -84,13 +84,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openSurvey(String json, String registered_by, long TIMER, String TIMER_HEADER) {
+    private void openSurvey(String json, String registered_by, long TIMER,
+                            String TIMER_HEADER, Boolean HANDLING_BACK_BUTTON) {
         Intent i_survey = new Intent(MainActivity.this, SurveyActivity.class);
         //i_survey.putExtra("json_survey", loadSurveyJson("customer_survey.json"));
         i_survey.putExtra("json_survey", json);
         i_survey.putExtra(AppSurveyConstants.SUR_REGISTERED_BY, registered_by);
         i_survey.putExtra(AppSurveyConstants.TIMER_IN_MILLI_SECONDS, TIMER);
         i_survey.putExtra(AppSurveyConstants.TIMER_HEADER_STRING, TIMER_HEADER);
+        i_survey.putExtra(AppSurveyConstants.HANDLING_BACK_BUTTON, HANDLING_BACK_BUTTON);
         startActivityForResult(i_survey, SURVEY_REQUEST);
     }
 }
