@@ -114,7 +114,6 @@ public class SurveyActivity extends AppCompatActivity {
         frag_end.setArguments(eBundle);
         arraylist_fragments.add(frag_end);
 
-
         mPager = (ViewPager) findViewById(R.id.pager);
         AdapterFragmentQ mPagerAdapter = new AdapterFragmentQ(getSupportFragmentManager(), arraylist_fragments);
         mPager.setAdapter(mPagerAdapter);
@@ -124,10 +123,15 @@ public class SurveyActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 txTimer.setText(TIMER_HEADER_STRING + " " + millisUntilFinished / 1000);
                 //here you can have your logic to set text to edittext
+                if ((millisUntilFinished / 1000) > 5) {
+                    txTimer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                } else {
+                    txTimer.setBackgroundColor(getResources().getColor(R.color.red));
+                }
             }
 
             public void onFinish() {
-                txTimer.setText("done!");
+                txTimer.setText("TIME-UP");
                 event_survey_completed(Answers.getInstance(), false);
             }
 
