@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                         openSurvey(response.body().toString(), "BAA0006",
                                 30000, "REMAINING TIME:",
-                                false);
+                                true);
                     }
 
                     @Override
