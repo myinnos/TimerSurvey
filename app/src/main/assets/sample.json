@@ -1,0 +1,36 @@
+{
+"survey_properties": {
+"intro_message": "<strong>Sample Timer Form</strong>",
+"end_message": "Good job.!!",
+"skip_intro": false
+},
+"questions": [
+{
+"question_type": "ImageGrid",
+"question_v_type": "string",
+"question_id": "pick_celebrity",
+"question_title": "Pick one celebrity?",
+"description": "",
+"random_choices": true,
+"is_village_check": false,
+"choices": [
+{"name": "PawanKalyan:-https://i.postimg.cc/4ydHmMN8/pspk.jpg", "value": "PawanKalyan"},
+{"name": "Trisha:-https://i.postimg.cc/x84JHRX9/trisha.jpg", "value": "Trisha"}
+],
+"required": true
+},
+{
+"question_type": "String",
+"question_v_type": "string",
+"question_id": "your_name",
+"question_title": "What is your Name?",
+"description": "",
+"required": true
+}
+]
+}
+
+
+
+
+

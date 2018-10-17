@@ -14,7 +14,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a24d1ae7-e4b9-4af3-899a-e8a717677bf1" name="Default" comment="" />
+    <list default="true" id="a24d1ae7-e4b9-4af3-899a-e8a717677bf1" name="Default" comment="back button handling">
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/sample.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +50,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SurveyActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SurveyActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/SurveyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="273">
+              <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5652#5653#0" expanded="true" />
-                <element signature="e#5718#5719#0" expanded="true" />
+                <element signature="e#5920#5946#0" expanded="true" />
+                <element signature="e#5980#6008#0" expanded="true" />
+                <element signature="e#6047#6070#0" expanded="true" />
+                <element signature="e#6109#6132#0" expanded="true" />
+                <element signature="e#6592#6834#0" expanded="true" />
+                <element signature="e#6833#6834#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,11 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
               <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-              <folding>
-                <element signature="e#2144#3381#0" expanded="true" />
-                <element signature="e#2393#2422#0" expanded="true" />
-                <element signature="e#3380#3381#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -70,8 +80,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+            <state relative-caret-position="59">
+              <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -88,30 +98,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppSurveyConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/widgets/AppSurveyConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FragmentImageGrid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/fragment/FragmentImageGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
+            <state relative-caret-position="1350">
               <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2288#2462#0" expanded="true" />
                 <element signature="e#2461#2462#0" expanded="true" />
-                <element signature="e#3836#3844#0" expanded="true" />
-                <element signature="e#3902#3910#0" expanded="true" />
-                <element signature="e#4989#5142#0" expanded="true" />
-                <element signature="e#5141#5142#0" expanded="true" />
-                <element signature="e#5196#5347#0" expanded="true" />
-                <element signature="e#5346#5347#0" expanded="true" />
+                <element signature="e#2533#2534#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,17 +118,17 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="870">
               <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiInterfaceSurveys.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiInterfaceSurveys.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="210">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -141,7 +136,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timersurveylib/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="885">
               <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
             </state>
           </provider>
@@ -3547,16 +3542,16 @@
         <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/function/RadioGroupPlus.java" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/res/layout/fragment_radioboxes.xml" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/fragment/FragmentRadioboxes.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/res/layout/fragment_image_grid.xml" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/fragment/FragmentImageGrid.java" />
         <option value="$PROJECT_DIR$/timersurveylib/build.gradle" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/fragment/FragmentEnd.java" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/res/layout/activity_main_survey.xml" />
-        <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/widgets/AppSurveyConstants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/MainActivity.java" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/widgets/AppSurveyConstants.java" />
         <option value="$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/SurveyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java" />
       </list>
     </option>
   </component>
@@ -3601,12 +3596,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="TimerSurvey" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="TimerSurvey" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="TimerSurvey" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="timersurveys" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TimerSurvey" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="timersurveys" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ApiInterface" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="TimerSurvey" type="1abcf292:AndroidViewProjectNode" />
               <item name="timersurveylib" type="feadf853:AndroidModuleNode" />
@@ -3630,6 +3646,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3826,7 +3843,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539764596400</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="back button handling">
+      <created>1539766150090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539766150090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="back button handling">
+      <created>1539766254245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539766254245</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3839,10 +3870,10 @@
       <window_info anchor="bottom" id="Logcat" order="7" weight="0.20336606" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.028050492" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.028050492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
@@ -3854,7 +3885,6 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Android WiFi ADB" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info anchor="right" id="Fabric" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -3865,6 +3895,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="7" weight="0.36083916" />
@@ -3909,7 +3940,8 @@
     <MESSAGE value="improved image grid flow" />
     <MESSAGE value="added timer" />
     <MESSAGE value="added timer color" />
-    <option name="LAST_COMMIT_MESSAGE" value="added timer color" />
+    <MESSAGE value="back button handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="back button handling" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/res/layout/fragment_image.xml" />
@@ -4087,9 +4119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#15963#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4126,40 +4155,27 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="870">
           <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timersurveylib/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="885">
           <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/fragment/FragmentImageGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
+        <state relative-caret-position="1350">
           <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2288#2462#0" expanded="true" />
             <element signature="e#2461#2462#0" expanded="true" />
-            <element signature="e#3836#3844#0" expanded="true" />
-            <element signature="e#3902#3910#0" expanded="true" />
-            <element signature="e#4989#5142#0" expanded="true" />
-            <element signature="e#5141#5142#0" expanded="true" />
-            <element signature="e#5196#5347#0" expanded="true" />
-            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#2533#2534#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -4167,25 +4183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding>
-            <element signature="e#2144#3381#0" expanded="true" />
-            <element signature="e#2393#2422#0" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/widgets/AppSurveyConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -4193,6 +4190,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/widgets/AppSurveyConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -4206,15 +4210,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/timersurveylib/src/main/java/in/myinnos/timersurveylib/SurveyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="273">
+          <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5652#5653#0" expanded="true" />
-            <element signature="e#5718#5719#0" expanded="true" />
+            <element signature="e#5920#5946#0" expanded="true" />
+            <element signature="e#5980#6008#0" expanded="true" />
+            <element signature="e#6047#6070#0" expanded="true" />
+            <element signature="e#6109#6132#0" expanded="true" />
+            <element signature="e#6592#6834#0" expanded="true" />
+            <element signature="e#6833#6834#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/myinnos/timersurveys/ApiInterface/ApiInterfaceSurveys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
