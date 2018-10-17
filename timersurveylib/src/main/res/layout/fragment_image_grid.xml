@@ -39,6 +39,7 @@
                     android:padding="10dp">
 
                     <LinearLayout
+                        android:id="@+id/liImg01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -64,6 +65,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/liImg02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

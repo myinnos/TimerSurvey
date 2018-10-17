@@ -2,7 +2,6 @@ package in.myinnos.timersurveylib;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 
 import in.myinnos.timersurveylib.adapters.AdapterFragmentQ;
 import in.myinnos.timersurveylib.fragment.FragmentEnd;
-import in.myinnos.timersurveylib.fragment.FragmentRadioboxes;
+import in.myinnos.timersurveylib.fragment.FragmentImageGrid;
 import in.myinnos.timersurveylib.fragment.FragmentStart;
 import in.myinnos.timersurveylib.fragment.FragmentTextSimple;
 import in.myinnos.timersurveylib.models.Question;
@@ -88,8 +87,8 @@ public class SurveyActivity extends AppCompatActivity {
                 arraylist_fragments.add(frag);
             }
 
-            if (mQuestion.getQuestionType().equals("Radioboxes")) {
-                FragmentRadioboxes frag = new FragmentRadioboxes();
+            if (mQuestion.getQuestionType().equals("ImageGrid")) {
+                FragmentImageGrid frag = new FragmentImageGrid();
                 Bundle xBundle = new Bundle();
                 xBundle.putSerializable("data", mQuestion);
                 xBundle.putString("style", style_string);

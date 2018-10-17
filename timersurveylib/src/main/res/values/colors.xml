@@ -7,6 +7,7 @@
     <color name="flat_pressed">#66999999</color>
     <color name="survey_button_text">#FFFFFF</color>
     <color name="survey_text">#000000</color>
+    <color name="survey_text_choosen">#FF4081</color>
 
     <color name="black_transparent">#33000000</color>
 
