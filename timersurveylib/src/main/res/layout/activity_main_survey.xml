@@ -4,11 +4,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <in.myinnos.timersurveylib.widgets.NoSwipeViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView
+        android:id="@+id/txTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <in.myinnos.timersurveylib.widgets.NoSwipeViewPager xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txTimer" />
 
     <include layout="@layout/progress_view" />
 

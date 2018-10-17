@@ -3,12 +3,15 @@ package in.myinnos.timersurveylib;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -31,7 +34,10 @@ public class SurveyActivity extends AppCompatActivity {
     private ViewPager mPager;
     private String style_string = null;
     private String registered_by;
+    private long TIMER_IN_MILLI_SECONDS = 0;
     private LinearLayout liProgress;
+    private TextView txTimer;
+    private String TIMER_HEADER_STRING = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +47,17 @@ public class SurveyActivity extends AppCompatActivity {
         // Initialize Realm
         Realm.init(this);
 
-
         liProgress = (LinearLayout) findViewById(R.id.liProgress);
         liProgress.setVisibility(View.GONE);
-
+        txTimer = (TextView) findViewById(R.id.txTimer);
 
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
             mSurveyPojo = new Gson().fromJson(bundle.getString("json_survey"), SurveyPojo.class);
             /// registered_by user
             registered_by = bundle.getString(AppSurveyConstants.SUR_REGISTERED_BY);
-
+            TIMER_IN_MILLI_SECONDS = bundle.getLong(AppSurveyConstants.TIMER_IN_MILLI_SECONDS);
+            TIMER_HEADER_STRING = bundle.getString(AppSurveyConstants.TIMER_HEADER_STRING);
             //
             if (bundle.containsKey("style")) {
                 style_string = bundle.getString("style");
@@ -113,6 +119,19 @@ public class SurveyActivity extends AppCompatActivity {
         AdapterFragmentQ mPagerAdapter = new AdapterFragmentQ(getSupportFragmentManager(), arraylist_fragments);
         mPager.setAdapter(mPagerAdapter);
 
+        new CountDownTimer(TIMER_IN_MILLI_SECONDS, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                txTimer.setText(TIMER_HEADER_STRING + " " + millisUntilFinished / 1000);
+                //here you can have your logic to set text to edittext
+            }
+
+            public void onFinish() {
+                txTimer.setText("done!");
+                event_survey_completed(Answers.getInstance(), false);
+            }
+
+        }.start();
     }
 
     public void go_to_next() {
@@ -143,14 +162,22 @@ public class SurveyActivity extends AppCompatActivity {
                     }).show();
 
         } else {
-
-            mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            //mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+            Snackbar snackbar = Snackbar
+                    .make(mPager, "Sorry, You cannot go back", Snackbar.LENGTH_LONG)
+                    .setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                        }
+                    });
+            snackbar.show();
         }
     }
 
-    public void event_survey_completed(Answers instance) {
+    public void event_survey_completed(Answers instance, Boolean status) {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("answers", instance.get_json_object());
+        returnIntent.putExtra("answers_status", status);
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }

@@ -1,20 +1,18 @@
 package in.myinnos.timersurveys;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import in.myinnos.timersurveys.ApiInterface.ApiInterfaceSurveys;
 import in.myinnos.timersurveylib.SurveyActivity;
 import in.myinnos.timersurveylib.widgets.AppSurveyConstants;
+import in.myinnos.timersurveys.ApiInterface.ApiInterfaceSurveys;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
 
-                        openSurvey(response.body().toString(), "BAA0006");
+                        openSurvey(response.body().toString(), "BAA0006",
+                                30000, "REMAINING TIME:");
 
                     }
 
@@ -68,21 +67,30 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == SURVEY_REQUEST) {
             if (resultCode == RESULT_OK) {
 
+                Boolean answers_status = data.getExtras().getBoolean("answers_status");
+                if (!answers_status) {
+                    Toast.makeText(getApplicationContext(),
+                            "failed!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String answers_json = data.getExtras().getString("answers");
                 Log.d("****", "****************** WE HAVE ANSWERS ******************");
                 Log.v("ANSWERS JSON", answers_json);
                 Log.d("****", "*****************************************************");
-
+                Toast.makeText(getApplicationContext(),
+                        String.valueOf(answers_json), Toast.LENGTH_SHORT).show();
                 //do whatever you want with them...
             }
         }
     }
 
-    private void openSurvey(String json, String registered_by) {
+    private void openSurvey(String json, String registered_by, long TIMER, String TIMER_HEADER) {
         Intent i_survey = new Intent(MainActivity.this, SurveyActivity.class);
         //i_survey.putExtra("json_survey", loadSurveyJson("customer_survey.json"));
         i_survey.putExtra("json_survey", json);
         i_survey.putExtra(AppSurveyConstants.SUR_REGISTERED_BY, registered_by);
+        i_survey.putExtra(AppSurveyConstants.TIMER_IN_MILLI_SECONDS, TIMER);
+        i_survey.putExtra(AppSurveyConstants.TIMER_HEADER_STRING, TIMER_HEADER);
         startActivityForResult(i_survey, SURVEY_REQUEST);
     }
 }
